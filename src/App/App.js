@@ -21,7 +21,7 @@ class App extends Component {
         <h1 className="app-title">Turing Cafe Reservations</h1>
         <div className="resy-form"></div>
         <div className="resy-container">
-          <ResyContainer reservation={this.state.reservations} />
+          <ResyContainer reservations={this.state.reservations} />
         </div>
       </div>
     );

@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 
 class ResyForm extends Component {
-  constructor() {
+  constructor(props) {
     super();
     this.state = {
       name: '',
@@ -9,6 +9,7 @@ class ResyForm extends Component {
       time: '',
       number: 0,
     };
+    console.log(props)
   }
   changeState = (e) => {
     this.setState({[e.target.name]: e.target.value})
@@ -20,7 +21,7 @@ class ResyForm extends Component {
       <input onChange={this.changeState} type="text" name="date" />
       <input onChange={this.changeState} type="text" name="time" />
       <input onChange={this.changeState} type="number" name="number" />
-      <button onSubmit={this.props.postResy} type="submit" value="submit">Make a Reservation</button>
+      <button onClick={this.props.updateResys} type="submit" value={this.state}>Make a Reservation</button>
     </>;
   }
 }

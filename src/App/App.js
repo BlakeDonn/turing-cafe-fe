@@ -20,8 +20,8 @@ class App extends Component {
     this.setState({});
   };
   updateResys = (e) => {
-    e.preventDefault()
-    console.log(e)
+    console.log(e.target.value)
+
   };
   render() {
     return (

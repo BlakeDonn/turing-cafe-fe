@@ -10,7 +10,7 @@ export const postReservation = async (reservation) => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({reservation}),
+      body: JSON.stringify(reservation),
     });
     return await promise.json();
   } catch (e) {

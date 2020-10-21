@@ -16,16 +16,17 @@ class App extends Component {
     this.setState({reservations});
   };
   postResy = async (resy) => {
-    const newReservation = await postReservation();
-    this.setState({});
+    const newReservation = await postReservation(resy);
+    return newReservation
   };
-  updateResys = (resy) => {
+  updateResys = async (resy) => {
     const newResy = {
       name: resy.name,
       date: resy.date,
       time: resy.time,
-      number: resy.number,
+      number: parseInt(resy.number),
     }
+    let response = await this.postResy(newResy)
     this.setState({reservations: [...this.state.reservations, newResy]})
   };
   render() {

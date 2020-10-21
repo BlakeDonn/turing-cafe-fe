@@ -25,3 +25,4 @@ it("Should mount with api reservations and be able to make new ones", async () =
   userEvent.click(screen.getByRole("button", {name: "Make a Reservation"}));
   expect(screen.getByText("Blake")).toBeInTheDocument()
 });
+

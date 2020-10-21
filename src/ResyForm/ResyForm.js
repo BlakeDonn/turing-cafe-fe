@@ -9,19 +9,23 @@ class ResyForm extends Component {
       time: '',
       number: 0,
     };
-    console.log(props)
+    this.baseState = this.state
   }
   changeState = (e) => {
     this.setState({[e.target.name]: e.target.value})
   }
+  submitResy = (e) => {
+    this.props.updateResys(this.state)
+    this.setState(this.baseState)
+  }
 
   render() {
     return <>
-      <input onChange={this.changeState} type="text" name="name" />
-      <input onChange={this.changeState} type="text" name="date" />
-      <input onChange={this.changeState} type="text" name="time" />
-      <input onChange={this.changeState} type="number" name="number" />
-      <button onClick={() => this.props.updateResys(this.state)} type="submit">Make a Reservation</button>
+      <input onChange={this.changeState} value={this.state.name} type="text" name="name" />
+      <input onChange={this.changeState} value={this.state.date} type="text" name="date" />
+      <input onChange={this.changeState} value={this.state.time} type="text" name="time" />
+      <input onChange={this.changeState} value={this.state.number} type="number" name="number" />
+      <button onClick={this.submitResy} type="submit">Make a Reservation</button>
     </>;
   }
 }

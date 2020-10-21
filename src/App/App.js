@@ -26,7 +26,7 @@ class App extends Component {
       time: resy.time,
       number: resy.number,
     }
-    console.log(newResy)
+    this.setState({reservations: [...this.state.reservations, newResy]})
   };
   render() {
     return (

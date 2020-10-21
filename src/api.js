@@ -17,3 +17,12 @@ export const postReservation = async (reservation) => {
     throw e;
   }
 };
+export const deleteResy = async (id) => {
+  try {
+    fetch(`http://localhost:3001/api/v1/reservations/:${id}`, {
+      method: "DELETE",
+    });
+  } catch (e) {
+    throw e;
+  }
+};

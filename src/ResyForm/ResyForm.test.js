@@ -4,9 +4,10 @@ import {render, screen} from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import "@testing-library/jest-dom";
 const updateResys = jest.fn();
+const deleteResy = jest.fn();
 
 describe("Card", () => {
-  render(<ResyForm updateResys={updateResys} />);
+  render(<ResyForm deleteResy={deleteResy} updateResys={updateResys} />);
   it("should render with input fields and submit button", () => {
     expect(screen.getByText("Make a Reservation")).toBeInTheDocument();
     expect(screen.getByPlaceholderText("name")).toBeInTheDocument();

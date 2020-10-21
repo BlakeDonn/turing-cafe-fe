@@ -1,13 +1,12 @@
 import React, {Component} from "react";
-import {getAllReservations} from "../api.js";
+import {getAllReservations, postReservation} from "../api.js";
 import {ResyContainer} from "../ResyContainer/ResyContainer";
 import {ResyForm} from "../ResyForm/ResyForm";
 import "./App.css";
 
 class App extends Component {
-
   constructor() {
-    super()
+    super();
     this.state = {
       reservations: {},
     };
@@ -15,6 +14,10 @@ class App extends Component {
   componentDidMount = async () => {
     const reservations = await getAllReservations();
     this.setState({reservations});
+  };
+  postResy = async (resy) => {
+    const newReservation = await postReservation();
+    this.setState({});
   };
   render() {
     return (

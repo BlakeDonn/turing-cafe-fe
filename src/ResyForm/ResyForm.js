@@ -21,7 +21,7 @@ class ResyForm extends Component {
       <input onChange={this.changeState} type="text" name="date" />
       <input onChange={this.changeState} type="text" name="time" />
       <input onChange={this.changeState} type="number" name="number" />
-      <button onClick={this.props.updateResys} type="submit" value={this.state}>Make a Reservation</button>
+      <button onClick={() => this.props.updateResys(this.state)} type="submit">Make a Reservation</button>
     </>;
   }
 }

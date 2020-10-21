@@ -19,9 +19,14 @@ class App extends Component {
     const newReservation = await postReservation();
     this.setState({});
   };
-  updateResys = (e) => {
-    console.log(e.target.value)
-
+  updateResys = (resy) => {
+    const newResy = {
+      name: resy.name,
+      date: resy.date,
+      time: resy.time,
+      number: resy.number,
+    }
+    console.log(newResy)
   };
   render() {
     return (

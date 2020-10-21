@@ -14,15 +14,15 @@ describe("Card", () => {
     expect(screen.getByPlaceholderText("time")).toBeInTheDocument();
     expect(screen.getByPlaceholderText("number")).toBeInTheDocument();
   });
-  it("should be able to enter user info", () => {
+  it("should be able to enter reservation info", () => {
     render(<ResyForm updateResys={updateResys} />);
     userEvent.type(screen.getByPlaceholderText("name"), "Blake");
     userEvent.type(screen.getByPlaceholderText("date"), "05/23");
     userEvent.type(screen.getByPlaceholderText("time"), "6:00");
     userEvent.type(screen.getByPlaceholderText("number"), "3");
-    expect(screen.getByText("Make a Reservation")).toBeInTheDocument();
-    expect(screen.getByText("Make a Reservation")).toBeInTheDocument();
-    expect(screen.getByText("Make a Reservation")).toBeInTheDocument();
-    expect(screen.getByText("Make a Reservation")).toBeInTheDocument();
+    expect(screen.getByDisplayValue("Blake")).toBeInTheDocument();
+    expect(screen.getByDisplayValue("05/23")).toBeInTheDocument();
+    expect(screen.getByDisplayValue("6:00")).toBeInTheDocument();
+    expect(screen.getByDisplayValue("3")).toBeInTheDocument();
   });
 });

@@ -19,12 +19,16 @@ class App extends Component {
     const newReservation = await postReservation();
     this.setState({});
   };
+  updateResys = (e) => {
+    e.preventDefault()
+    console.log(e)
+  };
   render() {
     return (
       <div className="App">
         <h1 className="app-title">Turing Cafe Reservations</h1>
         <div className="resy-form">
-          <ResyForm />
+          <ResyForm updateResys={this.updateResys} />
         </div>
         <div className="resy-container">
           <ResyContainer reservations={this.state.reservations} />

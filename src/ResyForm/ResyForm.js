@@ -1,6 +1,18 @@
-import React from "react";
+import React, {Component} from "react";
 
-export const ResyForm = () => {
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      id: '',
+      date: '',
+      time: '',
+      number: 0,
+    };
+  }
 
-  return <></>
+  render() {
+    return <></>;
+  }
 }
+export default App;

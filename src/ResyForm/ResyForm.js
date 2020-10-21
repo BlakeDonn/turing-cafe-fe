@@ -1,10 +1,10 @@
 import React, {Component} from "react";
 
-class App extends Component {
+class ResyForm extends Component {
   constructor() {
     super();
     this.state = {
-      id: '',
+      name: '',
       date: '',
       time: '',
       number: 0,
@@ -12,7 +12,13 @@ class App extends Component {
   }
 
   render() {
-    return <></>;
+    return <>
+      <input type="text" name="name" />
+      <input type="text" name="date" />
+      <input type="text" name="time" />
+      <input type="number" name="number" />
+      <button type="submit" value="submit">Make a Reservation</button>
+    </>;
   }
 }
-export default App;
+export default ResyForm;

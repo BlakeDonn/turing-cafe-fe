@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {getAllReservations, postReservation} from "../api.js";
 import {ResyContainer} from "../ResyContainer/ResyContainer";
-import {ResyForm} from "../ResyForm/ResyForm";
+import ResyForm from "../ResyForm/ResyForm";
 import "./App.css";
 
 class App extends Component {

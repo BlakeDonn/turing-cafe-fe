@@ -10,6 +10,9 @@ class ResyForm extends Component {
       number: 0,
     };
   }
+  changeState = (e) => {
+    this.setState({[e.target.name]: e.target.value})
+  }
 
   render() {
     return <>

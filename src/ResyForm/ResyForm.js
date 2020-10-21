@@ -13,11 +13,11 @@ class ResyForm extends Component {
 
   render() {
     return <>
-      <input type="text" name="name" />
-      <input type="text" name="date" />
-      <input type="text" name="time" />
-      <input type="number" name="number" />
-      <button type="submit" value="submit">Make a Reservation</button>
+      <input onChange={this.changeState} type="text" name="name" />
+      <input onChange={this.changeState} type="text" name="date" />
+      <input onChange={this.changeState} type="text" name="time" />
+      <input onChange={this.changeState} type="number" name="number" />
+      <button onSubmit={this.props.postResy} type="submit" value="submit">Make a Reservation</button>
     </>;
   }
 }

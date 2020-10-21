@@ -21,10 +21,10 @@ class ResyForm extends Component {
 
   render() {
     return <>
-      <input onChange={this.changeState} value={this.state.name} type="text" name="name" />
-      <input onChange={this.changeState} value={this.state.date} type="text" name="date" />
-      <input onChange={this.changeState} value={this.state.time} type="text" name="time" />
-      <input onChange={this.changeState} value={this.state.number} type="number" name="number" />
+      <input onChange={this.changeState} value={this.state.name} placeholder="name" type="text" name="name" />
+      <input onChange={this.changeState} value={this.state.date} placeholder="date" type="text" name="date" />
+      <input onChange={this.changeState} value={this.state.time} placeholder="time" type="text" name="time" />
+      <input onChange={this.changeState} value={this.state.number} placeholder="number" type="number" name="number" />
       <button onClick={this.submitResy} type="submit">Make a Reservation</button>
     </>;
   }

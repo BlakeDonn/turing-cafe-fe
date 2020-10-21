@@ -12,4 +12,8 @@ describe("Card", () => {
   it("should render a card", () => {
     expect(screen.getByText("Make a Reservation")).toBeInTheDocument();
   });
+  it("Should reflect bad login", () => {
+    render(<ResyForm updateResys={updateResys} />);
+    screen.debug()
+  });
 });

@@ -23,5 +23,5 @@ it("Should mount with api reservations and be able to make new ones", async () =
   userEvent.type(screen.getByPlaceholderText("number"), "3");
   await waitFor(() => expect(screen.getByText("test")).toBeInTheDocument());
   userEvent.click(screen.getByRole("button", {name: "Make a Reservation"}));
-  screen.debug();
+  expect(screen.getByText("Blake")).toBeInTheDocument()
 });
